@@ -1,4 +1,4 @@
-// Puntos 1 y 2: Declaración, inicialización, recorrido e impresión de arreglos
+// Puntos 1, 2 y 3: Declaración, recorrido y modificación de arreglos
 import 'dart:math';
 import 'dart:io';
 
@@ -25,4 +25,21 @@ void main() {
     stdout.write("$n ");
   }
   print("");
+
+  // --- Punto 3: Modificación ---
+
+  // Cambiar todos los valores impares por cero
+  List<int> numerosModif = List.from(numeros);
+  print("\nCambio de impares a cero:");
+  for (int i = 0; i < numerosModif.length; i++) {
+    if (numerosModif[i] % 2 != 0) numerosModif[i] = 0;
+  }
+  print(numerosModif.join(" "));
+
+  // Multiplicar todos los valores por su índice
+  print("\nMultiplicación por índice:");
+  for (int i = 0; i < numerosModif.length; i++) {
+    numerosModif[i] *= i;
+  }
+  print(numerosModif.join(" "));
 }

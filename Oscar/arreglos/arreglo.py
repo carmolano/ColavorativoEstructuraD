@@ -1,4 +1,4 @@
-# Puntos 1 y 2: Declaración, inicialización, recorrido e impresión de arreglos
+# Puntos 1, 2 y 3: Declaración, recorrido y modificación de arreglos
 import random
 
 # Declarar una lista de 10 enteros con valores aleatorios del 1 al 100
@@ -19,3 +19,19 @@ print("\nRecorrido for-each:")
 for n in numeros:
     print(n, end=" ")
 print()
+
+# --- Punto 3: Modificación ---
+
+# Cambiar todos los valores impares por cero (copia para no alterar el original)
+numeros_modif = numeros[:]
+print("\nCambio de impares a cero:")
+for i in range(len(numeros_modif)):
+    if numeros_modif[i] % 2 != 0:
+        numeros_modif[i] = 0
+print(" ".join(map(str, numeros_modif)))
+
+# Multiplicar todos los valores por su índice
+print("\nMultiplicación por índice:")
+for i in range(len(numeros_modif)):
+    numeros_modif[i] *= i
+print(" ".join(map(str, numeros_modif)))

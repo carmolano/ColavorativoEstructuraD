@@ -1,4 +1,4 @@
-// Puntos 1 y 2: Declaración, inicialización, recorrido e impresión de arreglos
+// Puntos 1, 2 y 3: Declaración, recorrido y modificación de arreglos
 using System;
 
 class Arreglo
@@ -38,5 +38,24 @@ class Arreglo
             Console.Write(n + " ");
         }
         Console.WriteLine();
+
+        // --- Punto 3: Modificación ---
+
+        // Cambiar todos los valores impares por cero
+        Console.WriteLine("\nCambio de impares a cero:");
+        for (int i = 0; i < numeros.Length; i++)
+        {
+            if (numeros[i] % 2 != 0)
+                numeros[i] = 0;
+        }
+        Console.WriteLine(string.Join(" ", numeros));
+
+        // Multiplicar todos los valores por suíndice
+        Console.WriteLine("\nMultiplicación por índice:");
+        for (int i = 0; i < numeros.Length; i++)
+        {
+            numeros[i] *= i;
+        }
+        Console.WriteLine(string.Join(" ", numeros));
     }
 }
