@@ -1,5 +1,6 @@
-// Punto 1: Declaración e inicialización de un arreglo con valores aleatorios
+// Puntos 1 y 2: Declaración, inicialización, recorrido e impresión de arreglos
 import 'dart:math';
+import 'dart:io';
 
 void main() {
   final random = Random();
@@ -9,4 +10,19 @@ void main() {
 
   print("Arreglo inicializado con valores aleatorios:");
   print(numeros.join(" "));
+
+  // --- Punto 2: Recorrido e impresión ---
+
+  // Recorrido con for clásico
+  print("\nRecorrido con for clásico:");
+  for (int i = 0; i < numeros.length; i++) {
+    print("  numeros[$i] = ${numeros[i]}");
+  }
+
+  // Recorrido con for-in (equivalente a for-each en Dart)
+  print("\nRecorrido con for-in:");
+  for (int n in numeros) {
+    stdout.write("$n ");
+  }
+  print("");
 }
